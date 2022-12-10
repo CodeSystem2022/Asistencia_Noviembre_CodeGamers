@@ -33,7 +33,7 @@ public class Arreglos_Ejercicio_1 {
 /*
 Autor: Di Stefano Diego
 
-Ejercicio 1: Leer 5 numeros, guardandolos en un arreglo y 
+Ejercicio 2: Leer 5 numeros, guardandolos en un arreglo y 
 mostrarlos en el orden inverso al introducido
 */
 
