@@ -163,3 +163,65 @@ public class Ejercicio2 {
     }
 }
 
+/*
+Autor: Roberto Di Stefano
+
+
+Ejercicio Test: 
+*/
+
+
+package domain;
+
+
+public class Empleado extends Persona{
+    @Override
+    public void imprimir(){
+        System.out.println("Metodo imprimir de la clase hija");
+    }
+}
+
+package domain;
+
+
+public class Persona {
+    public final static int CONSTANTE_AQUI = 15;
+    private String nombre;
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public void imprimir(){
+        System.out.println("Se esta imprimiendo");
+    }
+}
+
+
+package test;
+
+import domain.Persona;
+
+public class TestFinal {
+    public static void main(String[] args) {
+        final int miDni = 39565278;
+        System.out.println("miDni = " + miDni);
+        //miDni = 40605106; No se puede modificar
+        //Persona.CONSTANTE_AQUI = 9;// No se puede modificar
+        System.out.println("Mi atributo constante es "+Persona.CONSTANTE_AQUI);
+        
+        final Persona persona1 = new Persona();
+        //persona1 = new Persona(); NO SE PUEDE ASIGNAR UNA NUEVA REFERENCIA
+        persona1.setNombre("Ariel Betancud");
+        System.out.println("persona1 nombre: " + persona1.getNombre());
+        persona1.setNombre("Liliana");
+        System.out.println("persona1 nombre: " + persona1.getNombre());
+    }
+}
+
+
+
